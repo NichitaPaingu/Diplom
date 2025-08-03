@@ -1,0 +1,549 @@
+.subscribe-section {
+    background: linear-gradient(135deg, #ea543c 0%, #c5aa24 50%, #ea543c 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.subscribe-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+}
+
+.subscribe-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 40% 40%,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+        );
+    background-size: 50px 50px, 30px 30px, 70px 70px;
+    animation: particleFloat 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+    }
+}
+
+.subscribe-content {
+    max-width: 1500px;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.subscribe-text-block {
+    color: white;
+    width: 40%;
+    animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.subscribe-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    background: linear-gradient(45deg, #fff, #f0f0f0, #fff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textShimmer 3s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.subscribe-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #fff, transparent);
+    border-radius: 2px;
+    animation: expandWidth 1.5s ease-out 0.5s both;
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80px;
+    }
+}
+
+.subscribe-desc {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-btn {
+    background: linear-gradient(45deg, #fff, #f8f9fa, #fff);
+    background-size: 200% 200%;
+    animation: buttonGradient 3s ease infinite;
+    color: #ff5722;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@keyframes buttonGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.subscribe-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.subscribe-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.subscribe-btn:hover::before {
+    left: 100%;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    color: white;
+    background: linear-gradient(135deg, #ea543c 0%, #ff5722 100%);
+}
+
+.subscribe-btn:hover .btn-text {
+    transform: translateX(-2px);
+}
+
+.subscribe-btn:hover .btn-icon {
+    transform: translateX(3px);
+    opacity: 1;
+}
+
+.subscribe-btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+.subscribe-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.subscribe-btn:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.btn-text {
+    transition: transform 0.3s ease;
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.subscribe-images-grid {
+    display: grid;
+    width: 60%;
+    height: 900px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    animation: slideInRight 1s ease-out 0.3s both;
+    position: relative;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.subscribe-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.subscribe-img.loaded {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.subscribe-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.subscribe-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.subscribe-img:hover::before {
+    opacity: 1;
+}
+
+.subscribe-img:hover::after {
+    opacity: 1;
+}
+
+.subscribe-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.subscribe-img:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Позиционирование для сетки 3x3 с центральным элементом */
+.subscribe-img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    transform: scale(0.9);
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.subscribe-img:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    transform: scale(0.85);
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.subscribe-img:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+    transform: scale(0.9);
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.subscribe-img:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+    transform: scale(0.85);
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.subscribe-img:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2;
+    transform: scale(1.1);
+    z-index: 2;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.subscribe-img:nth-child(6) {
+    grid-column: 3;
+    grid-row: 2;
+    transform: scale(0.85);
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.subscribe-img:nth-child(7) {
+    grid-column: 1;
+    grid-row: 3;
+    transform: scale(0.9);
+    animation: fadeInUp 0.8s ease-out 0.7s both;
+}
+
+.subscribe-img:nth-child(8) {
+    grid-column: 2;
+    grid-row: 3;
+    transform: scale(0.85);
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.subscribe-img:nth-child(9) {
+    grid-column: 3;
+    grid-row: 3;
+    transform: scale(0.9);
+    animation: fadeInUp 0.8s ease-out 0.9s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(var(--scale, 0.9));
+    }
+}
+
+/* Дополнительные эффекты для центрального изображения */
+.subscribe-img:nth-child(5)::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ea543c, #c5aa24, #ea543c);
+    border-radius: 17px;
+    z-index: -1;
+    opacity: 0.3;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.02);
+    }
+}
+
+/* Улучшенные hover эффекты для разных позиций */
+.subscribe-img:nth-child(1):hover,
+.subscribe-img:nth-child(3):hover,
+.subscribe-img:nth-child(7):hover,
+.subscribe-img:nth-child(9):hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.subscribe-img:nth-child(2):hover,
+.subscribe-img:nth-child(4):hover,
+.subscribe-img:nth-child(6):hover,
+.subscribe-img:nth-child(8):hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.subscribe-img:nth-child(5):hover {
+    transform: scale(1.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Эффект ошибки загрузки */
+.subscribe-img.error {
+    background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.subscribe-img.error::before {
+    content: "⚠";
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+/* Адаптивные эффекты для мобильных устройств */
+@media (max-width: 768px) {
+    .subscribe-section::after {
+        background-size: 30px 30px, 20px 20px, 40px 40px;
+        animation-duration: 15s;
+    }
+
+    .subscribe-img:nth-child(5)::before {
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        border-radius: 15px;
+    }
+}
+
+/* Эффект для предпочтения уменьшенного движения */
+@media (prefers-reduced-motion: reduce) {
+    .subscribe-section,
+    .subscribe-section::before,
+    .subscribe-section::after,
+    .subscribe-img,
+    .subscribe-btn,
+    .subscribe-title {
+        animation: none;
+        transition: none;
+    }
+
+    .subscribe-img:nth-child(5)::before {
+        animation: none;
+    }
+}
+
+/* Эффект для высокого DPI */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .subscribe-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}

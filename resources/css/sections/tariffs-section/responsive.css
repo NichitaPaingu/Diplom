@@ -1,0 +1,256 @@
+/* Планшеты */
+@media (max-width: 768px) {
+    .tariffs-section {
+        padding: 3rem 0;
+    }
+
+    .tariffs-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .tariff-card {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .tariff-card-premium {
+        transform: none;
+    }
+
+    .tariff-card-premium:hover {
+        transform: translateY(-6px);
+    }
+
+    .tariff-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .tariff-price {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tariff-old-price {
+        font-size: 1.25rem;
+    }
+
+    .tariff-features {
+        margin-bottom: 2rem;
+    }
+
+    .tariff-features li {
+        padding: 0.625rem 0;
+        font-size: 0.95rem;
+        padding-left: 2rem;
+        min-height: 1.25rem;
+    }
+
+    .tariff-features li::before {
+        top: 0.625rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .tariff-btn {
+        padding: 1rem 1.75rem;
+        font-size: 1rem;
+    }
+
+    /* Уменьшаем эффекты hover для планшетов */
+    .tariff-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+
+    .tariff-features li:hover {
+        transform: translateX(3px);
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 480px) {
+    .tariffs-section {
+        padding: 4rem 0;
+    }
+
+    .tariffs-content {
+        padding: 0 1rem;
+    }
+
+    .tariffs-grid {
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .tariff-card {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .tariff-discount {
+        width: 60px;
+        height: 60px;
+        font-size: 0.9rem;
+        top: -15px;
+        right: -15px;
+    }
+
+    .tariff-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .tariff-price {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tariff-old-price {
+        font-size: 1rem;
+    }
+
+    .tariff-features {
+        margin-bottom: 1.75rem;
+    }
+
+    .tariff-features li {
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        padding-left: 1.75rem;
+        min-height: 1.125rem;
+        line-height: 1.5;
+    }
+
+    .tariff-features li::before {
+        top: 0.5rem;
+        width: 1.125rem;
+        height: 1.125rem;
+        font-size: 0.9rem;
+    }
+
+    .tariff-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+
+    /* Отключаем сложные эффекты на мобильных */
+    .tariff-card:hover {
+        transform: none;
+    }
+
+    .tariff-features li:hover {
+        transform: none;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+    .tariffs-section {
+        padding: 3rem 0;
+    }
+
+    .tariff-card {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .tariff-discount {
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+        top: -10px;
+        right: -10px;
+    }
+
+    .tariff-title {
+        font-size: 1.125rem;
+        margin-bottom: 0.875rem;
+    }
+
+    .tariff-price {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .tariff-features li {
+        padding: 0.375rem 0;
+        font-size: 0.85rem;
+        padding-left: 1.5rem;
+        min-height: 1rem;
+        line-height: 1.4;
+    }
+
+    .tariff-features li::before {
+        top: 0.375rem;
+        width: 1rem;
+        height: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .tariff-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Большие экраны */
+@media (min-width: 1200px) {
+    .tariffs-section {
+        padding: 9rem 0;
+    }
+
+    .tariffs-content {
+        max-width: 1400px;
+    }
+
+    .tariffs-grid {
+        gap: 3rem;
+        margin-top: 4rem;
+    }
+
+    .tariff-card {
+        padding: 3rem;
+        border-radius: 32px;
+    }
+
+    .tariff-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .tariff-price {
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .tariff-old-price {
+        font-size: 1.75rem;
+    }
+
+    .tariff-features {
+        margin-bottom: 3rem;
+    }
+
+    .tariff-features li {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        padding-left: 3rem;
+        min-height: 1.75rem;
+    }
+
+    .tariff-features li::before {
+        top: 1rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 1.2rem;
+    }
+
+    .tariff-btn {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}

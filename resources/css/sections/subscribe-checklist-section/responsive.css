@@ -1,0 +1,235 @@
+/* Планшеты */
+@media (max-width: 768px) {
+    .subscribe-checklist-section {
+        padding: 5rem 0;
+    }
+
+    .subscribe-checklist-content {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        text-align: center;
+    }
+
+    .subscribe-checklist-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .subscribe-checklist-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .subscribe-checklist-desc {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .subscribe-checklist-form {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .subscribe-checklist-input {
+        padding: 1.125rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .subscribe-checklist-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.375rem;
+    }
+
+    .subscribe-checklist-tags {
+        max-width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .checklist-tag {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.95rem;
+    }
+
+    /* Уменьшаем эффекты hover для планшетов */
+    .subscribe-checklist-btn:hover {
+        transform: translateY(-2px) scale(1.03);
+    }
+
+    .checklist-tag:hover {
+        transform: translateY(-3px) scale(1.03);
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 480px) {
+    .subscribe-checklist-section {
+        padding: 4rem 0;
+    }
+
+    .subscribe-checklist-content {
+        gap: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    .subscribe-checklist-title {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .subscribe-checklist-desc {
+        font-size: 1rem;
+        margin-bottom: 1.75rem;
+        line-height: 1.6;
+    }
+
+    .subscribe-checklist-tags {
+        gap: 0.875rem;
+    }
+
+    .checklist-tag {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+        border-radius: 25px;
+    }
+
+    /* Отключаем сложные эффекты на мобильных */
+    .subscribe-checklist-btn:hover {
+        transform: none;
+    }
+
+    .checklist-tag:hover {
+        transform: none;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+    .subscribe-checklist-section {
+        padding: 3rem 0;
+    }
+
+    .subscribe-checklist-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .subscribe-checklist-desc {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .subscribe-checklist-input {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .subscribe-checklist-btn {
+        height: 45px;
+        font-size: 1.125rem;
+    }
+
+    .checklist-tag {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Большие экраны */
+@media (min-width: 1200px) {
+    .subscribe-checklist-section {
+        padding: 9rem 0;
+    }
+
+    .subscribe-checklist-content {
+        max-width: 1400px;
+        gap: 6rem;
+    }
+
+    .subscribe-checklist-title {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .subscribe-checklist-title::after {
+        width: 100px;
+        height: 5px;
+    }
+
+    .subscribe-checklist-desc {
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+    }
+
+    .subscribe-checklist-form {
+        max-width: 500px;
+    }
+
+    .subscribe-checklist-input {
+        padding: 1.5rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .subscribe-checklist-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 1.75rem;
+    }
+
+    .subscribe-checklist-tags {
+        max-width: 400px;
+        gap: 1.5rem;
+    }
+
+    .checklist-tag {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Очень большие экраны */
+@media (min-width: 1600px) {
+    .subscribe-checklist-section {
+        padding: 11rem 0;
+    }
+
+    .subscribe-checklist-content {
+        max-width: 1600px;
+        gap: 7rem;
+    }
+
+    .subscribe-checklist-title {
+        font-size: 4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .subscribe-checklist-desc {
+        font-size: 1.4rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .subscribe-checklist-form {
+        max-width: 550px;
+    }
+
+    .subscribe-checklist-input {
+        padding: 1.75rem 2.25rem;
+        font-size: 1.3rem;
+    }
+
+    .subscribe-checklist-btn {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .subscribe-checklist-tags {
+        max-width: 450px;
+    }
+
+    .checklist-tag {
+        padding: 1.5rem 3rem;
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,196 @@
+/* Планшеты */
+@media (max-width: 768px) {
+    .recipes-preview-section {
+        padding: 3rem 0;
+    }
+
+    .recipes-preview-content {
+        padding: 0 1.5rem;
+    }
+
+    .recipes-preview-grid {
+        gap: 1.5rem;
+        max-width: 600px;
+    }
+
+    .recipe-card {
+        border-radius: 14px;
+    }
+
+    .recipe-card-title {
+        font-size: 1.25rem;
+        bottom: 1.25rem;
+        left: 1.25rem;
+    }
+
+    .recipe-card-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 1.125rem;
+        top: 1.25rem;
+        right: 1.25rem;
+    }
+
+    .recipe-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .recipe-card:hover .recipe-card-arrow {
+        transform: translateX(3px);
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 480px) {
+    .recipes-preview-section {
+        padding: 2rem 0;
+    }
+
+    .recipes-preview-content {
+        padding: 0 1rem;
+    }
+
+    .recipes-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 350px;
+    }
+
+    .recipe-card {
+        aspect-ratio: 3/2;
+        border-radius: 12px;
+    }
+
+    .recipe-card-title {
+        font-size: 1.125rem;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .recipe-card-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .recipe-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .recipe-card:hover .recipe-card-arrow {
+        transform: translateX(2px);
+    }
+}
+
+/* Большие экраны */
+@media (min-width: 1200px) {
+    .recipes-preview-content {
+        max-width: 1400px;
+    }
+
+    .recipes-preview-grid {
+        max-width: 1000px;
+        gap: 2.5rem;
+    }
+
+    .recipe-card {
+        border-radius: 20px;
+    }
+
+    .recipe-card-title {
+        font-size: 1.75rem;
+        bottom: 2rem;
+        left: 2rem;
+    }
+
+    .recipe-card-arrow {
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .recipe-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .recipe-card:hover .recipe-card-arrow {
+        transform: translateX(6px);
+    }
+}
+
+/* Очень большие экраны */
+@media (min-width: 1600px) {
+    .recipes-preview-section {
+        padding: 6rem 0;
+    }
+
+    .recipes-preview-grid {
+        max-width: 1200px;
+        gap: 3rem;
+    }
+
+    .recipe-card-title {
+        font-size: 2rem;
+        bottom: 2.5rem;
+        left: 2.5rem;
+    }
+
+    .recipe-card-arrow {
+        width: 52px;
+        height: 52px;
+        font-size: 1.75rem;
+        top: 2.5rem;
+        right: 2.5rem;
+    }
+}
+
+/* Планшеты в альбомной ориентации */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .recipes-preview-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        max-width: 1000px;
+    }
+
+    .recipe-card {
+        aspect-ratio: 1/1;
+    }
+
+    .recipe-card-title {
+        font-size: 1rem;
+        bottom: 0.75rem;
+        left: 0.75rem;
+    }
+
+    .recipe-card-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 0.875rem;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+}
+
+/* Высокое разрешение (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .recipe-card-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Темная тема (если поддерживается) */
+@media (prefers-color-scheme: dark) {
+    .recipes-preview-section {
+        background: #f8f9fa;
+    }
+
+    .recipe-card {
+        background: #ffffff;
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+}

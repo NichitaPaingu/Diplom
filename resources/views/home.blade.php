@@ -1,0 +1,12 @@
+<x-app-layout>
+    @include('main.hero-section')
+    @include('main.what-is-healthy-eating')
+    @include('main.subscribe-section')
+    @include('main.simple-tips-section')
+    @include('main.start-now-section')
+    @include('main.recipes-preview-section')
+    @include('main.individual-approach-section')
+    @include('main.eat-right-now-section')
+    @include('main.subscribe-checklist-section')
+    @include('main.tariffs-section')
+</x-app-layout>

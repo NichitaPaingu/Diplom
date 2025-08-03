@@ -1,0 +1,202 @@
+/* Планшеты */
+@media (max-width: 768px) {
+    .individual-approach-section {
+        padding: 3.5rem 0;
+    }
+
+    .individual-approach-content {
+        padding: 0 1.5rem;
+    }
+
+    .individual-approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+        max-width: 700px;
+    }
+
+    .approach-card:last-child {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    .approach-card {
+        padding: 1.75rem;
+        min-height: 280px;
+        border-radius: 20px;
+    }
+
+    .approach-title {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+
+    .approach-icon {
+        width: 55px;
+        height: 55px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .approach-desc {
+        font-size: 0.875rem;
+    }
+
+    .approach-subscribe-block {
+        margin-top: 2.25rem;
+        padding-top: 1.5rem;
+    }
+
+    .approach-subscribe-btn {
+        padding: 1.125rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 480px) {
+    .individual-approach-section {
+        padding: 2.5rem 0;
+    }
+
+    .individual-approach-content {
+        padding: 0 1rem;
+    }
+
+    .individual-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        max-width: 400px;
+    }
+
+    .approach-card:last-child {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .approach-card {
+        padding: 1.5rem;
+        min-height: auto;
+        border-radius: 18px;
+    }
+
+    .approach-icon {
+        width: 45px;
+        height: 45px;
+        bottom: 1.25rem;
+        right: 1.25rem;
+    }
+
+    .approach-title {
+        font-size: 1.05rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .approach-desc {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .approach-subscribe-block {
+        margin-top: 2rem;
+        padding-top: 1.25rem;
+    }
+
+    .approach-subscribe-note {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .approach-subscribe-btn {
+        padding: 1rem 1.25rem;
+        font-size: 0.875rem;
+        border-radius: 14px;
+    }
+
+    /* Уменьшаем эффекты hover для мобильных */
+    .approach-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+
+    .approach-card:hover .approach-icon {
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+
+/* Большие экраны */
+@media (min-width: 1200px) {
+    .individual-approach-content {
+        max-width: 1400px;
+    }
+
+    .individual-approach-grid {
+        max-width: 1200px;
+        gap: 2.5rem;
+    }
+
+    .approach-card {
+        padding: 2.5rem;
+        min-height: 320px;
+        border-radius: 28px;
+    }
+
+    .approach-icon {
+        width: 75px;
+        height: 75px;
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .approach-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .approach-desc {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .approach-subscribe-block {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+
+    .approach-subscribe-btn {
+        padding: 1.5rem 2rem;
+        font-size: 1rem;
+        border-radius: 18px;
+    }
+}
+
+/* Очень большие экраны */
+@media (min-width: 1600px) {
+    .individual-approach-content {
+        max-width: 1600px;
+    }
+
+    .individual-approach-grid {
+        max-width: 1400px;
+        gap: 3rem;
+    }
+
+    .approach-card {
+        padding: 3rem;
+        min-height: 360px;
+    }
+
+    .approach-icon {
+        width: 85px;
+        height: 85px;
+        bottom: 2.5rem;
+        right: 2.5rem;
+    }
+
+    .approach-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .approach-desc {
+        font-size: 1rem;
+    }
+}

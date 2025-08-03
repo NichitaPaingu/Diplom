@@ -1,0 +1,294 @@
+.subscribe-checklist-section {
+    padding: 7rem 0;
+    background: linear-gradient(135deg, #34bca6 0%, #c5aa24 50%, #ff6b35 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Декоративные элементы фона */
+.subscribe-checklist-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.12) 0%,
+        transparent 70%
+    );
+    z-index: 1;
+    animation: float 8s ease-in-out infinite;
+}
+
+.subscribe-checklist-section::after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 193, 7, 0.15) 0%,
+        transparent 70%
+    );
+    z-index: 1;
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+.subscribe-checklist-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.subscribe-checklist-left {
+    color: #ffffff;
+    animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.subscribe-checklist-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.75rem;
+    line-height: 1.2;
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 3px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.subscribe-checklist-title::after {
+    content: "";
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.6));
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-checklist-desc {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+}
+
+.subscribe-checklist-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 450px;
+    position: relative;
+}
+
+.subscribe-checklist-input {
+    flex: 1;
+    padding: 1.25rem 1.75rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #2c3e50;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.subscribe-checklist-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    border-color: rgba(255, 107, 53, 0.3);
+}
+
+.subscribe-checklist-input::placeholder {
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.subscribe-checklist-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4),
+        0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.subscribe-checklist-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.subscribe-checklist-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 16px 40px rgba(255, 107, 53, 0.5),
+        0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.subscribe-checklist-btn:hover::before {
+    left: 100%;
+}
+
+.subscribe-checklist-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.subscribe-checklist-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    max-width: 350px;
+    animation: slideInRight 1s ease-out 0.5s both;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.checklist-tag {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.checklist-tag::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.checklist-tag:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3), 0 6px 16px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.checklist-tag:hover::before {
+    left: 100%;
+}
+
+/* Добавляем декоративные частицы */
+.subscribe-checklist-section::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: twinkle 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+.subscribe-checklist-section::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 193, 7, 0.6);
+    border-radius: 50%;
+    animation: twinkle 5s ease-in-out infinite 1s;
+    z-index: 1;
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}

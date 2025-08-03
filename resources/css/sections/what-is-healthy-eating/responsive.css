@@ -1,0 +1,658 @@
+/* Healthy Eating Section - Responsive Styles */
+
+/* Large screens */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .nutrients-grid {
+        gap: 1.5rem;
+    }
+
+    .nutrient-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .healthy-eating-section {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .healthy-eating-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        min-height: auto;
+    }
+
+    .nutrient-card {
+        padding: 1.5rem;
+    }
+
+    .nutrient-title {
+        font-size: 1.5rem;
+    }
+
+    .nutrient-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .healthy-eating-tags {
+        gap: 0.8rem;
+    }
+
+    .tag {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .image-container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .healthy-eating-section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .healthy-eating-content {
+        gap: 2rem;
+    }
+
+    .nutrient-card {
+        padding: 1.2rem;
+    }
+
+    .nutrient-title {
+        font-size: 1.3rem;
+    }
+
+    .nutrient-list li {
+        font-size: 0.9rem;
+        padding: 0.4rem 0;
+    }
+
+    .nutrient-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .healthy-eating-tags {
+        gap: 0.6rem;
+        margin-top: 1.5rem;
+    }
+
+    .tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        border-radius: 20px;
+    }
+
+    .image-container {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 450px) {
+    .nutrients-grid {
+        /* grid-template-columns: 1fr; */
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .nutrients-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .nutrient-card {
+        padding: 1.2rem;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Упрощаем фоновые эффекты для мобильных */
+    .nutrient-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(
+                circle at 20% 80%,
+                rgba(255, 107, 53, 0.05) 0%,
+                transparent 50%
+            ),
+            radial-gradient(
+                circle at 80% 20%,
+                rgba(118, 193, 117, 0.05) 0%,
+                transparent 50%
+            );
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .nutrient-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Иконка и заголовок в одну линию */
+    .nutrient-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-bottom: 0;
+        margin-right: 0.8rem;
+        flex-shrink: 0;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: linear-gradient(135deg, #ff6b35, #f7931e);
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        animation: iconFloat 2s ease-in-out infinite;
+        z-index: 4;
+    }
+
+    .nutrient-icon::before {
+        display: none; /* Убираем сложные эффекты на мобильных */
+    }
+
+    @keyframes iconFloat {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-3px);
+        }
+    }
+
+    .nutrient-title {
+        font-size: 1rem;
+        font-weight: 800;
+        margin-bottom: 0.8rem;
+        min-height: auto;
+        line-height: 1.2;
+        color: #1a1a1a;
+        padding-left: 3rem;
+        padding-top: 0.5rem;
+        text-align: left;
+        background: linear-gradient(135deg, #1a1a1a 0%, #ff6b35 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        position: relative;
+        z-index: 4;
+    }
+
+    /* Улучшенный список */
+    .nutrient-list {
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 4;
+    }
+
+    .nutrient-list li {
+        padding: 0.4rem 0;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: #444;
+        padding-left: 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        margin: 0.1rem 0;
+    }
+
+    .nutrient-list li:hover {
+        color: #ff6b35;
+        transform: translateX(3px);
+        background: linear-gradient(
+            90deg,
+            rgba(255, 107, 53, 0.1),
+            transparent
+        );
+        padding-left: 0.5rem;
+    }
+
+    .nutrient-list li::before {
+        display: none;
+    }
+
+    /* Упрощенные декоративные элементы */
+    .nutrient-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 20px 20px 0;
+        border-color: transparent rgba(255, 107, 53, 0.1) transparent
+            transparent;
+        transition: all 0.3s ease;
+        z-index: 3;
+    }
+
+    .nutrient-card:hover::after {
+        border-color: transparent rgba(255, 107, 53, 0.2) transparent
+            transparent;
+    }
+
+    /* Улучшенные теги */
+    .healthy-eating-tags {
+        gap: 0.8rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .tag:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .tag-active {
+        background: linear-gradient(135deg, #ff6b35, #f7931e);
+        color: white;
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+    }
+}
+
+/* Small mobile */
+@media (max-width: 320px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .nutrient-card {
+        padding: 0.8rem;
+        min-height: auto;
+    }
+
+    .nutrient-title {
+        font-size: 0.9rem;
+        padding-left: 2.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .nutrient-list li {
+        font-size: 0.8rem;
+        padding: 0.3rem 0;
+        margin: 0.05rem 0;
+    }
+
+    .nutrient-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+        top: 0.8rem;
+        left: 0.8rem;
+    }
+
+    .tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .image-container {
+        max-width: 250px;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .healthy-eating-section {
+        padding: 2rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .healthy-eating-content {
+        gap: 1.5rem;
+    }
+
+    .nutrients-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .nutrient-card {
+        padding: 1rem;
+    }
+
+    .nutrient-title {
+        font-size: 1.2rem;
+    }
+
+    .nutrient-list li {
+        font-size: 0.8rem;
+        padding: 0.3rem 0;
+    }
+
+    .nutrient-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* Адаптивные стили для заголовков */
+@media (max-width: 1200px) {
+    .nutrient-title {
+        font-size: 1.3rem;
+        min-height: 3.2rem;
+    }
+
+    .nutrient-card[data-category="moderation"] .nutrient-title,
+    .nutrient-card[data-category="regularity"] .nutrient-title,
+    .nutrient-card[data-category="balance"] .nutrient-title,
+    .nutrient-card[data-category="natural"] .nutrient-title,
+    .nutrient-card[data-category="taste"] .nutrient-title {
+        font-size: 1.1rem;
+        min-height: 4.4rem;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Убираем изображение и делаем grid 1fr */
+    .healthy-eating-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .healthy-eating-image-block {
+        display: none;
+    }
+
+    .nutrients-container {
+        width: 100%;
+    }
+
+    /* Увеличиваем отступы между тегами */
+    .healthy-eating-tags {
+        gap: 1.5rem;
+    }
+
+    .tag {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nutrient-title {
+        font-size: 1.2rem;
+        min-height: 2.8rem;
+    }
+
+    .nutrient-card[data-category="moderation"] .nutrient-title,
+    .nutrient-card[data-category="regularity"] .nutrient-title,
+    .nutrient-card[data-category="balance"] .nutrient-title,
+    .nutrient-card[data-category="natural"] .nutrient-title,
+    .nutrient-card[data-category="taste"] .nutrient-title {
+        font-size: 1rem;
+        min-height: 4rem;
+    }
+
+    .nutrient-card {
+        min-height: auto;
+        padding: 1.2rem;
+    }
+
+    /* Делаем карточки более компактными */
+    .nutrient-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .nutrient-list li {
+        padding: 0.3rem 0;
+        font-size: 0.9rem;
+        padding-left: 1.2rem;
+    }
+
+    /* Увеличиваем отступы между тегами */
+    .healthy-eating-tags {
+        gap: 1.2rem;
+    }
+
+    .tag {
+        padding: 0.6rem 1.1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nutrient-title {
+        font-size: 1.1rem;
+        min-height: auto;
+    }
+
+    .nutrient-card[data-category="moderation"] .nutrient-title,
+    .nutrient-card[data-category="regularity"] .nutrient-title,
+    .nutrient-card[data-category="balance"] .nutrient-title,
+    .nutrient-card[data-category="natural"] .nutrient-title,
+    .nutrient-card[data-category="taste"] .nutrient-title {
+        font-size: 0.95rem;
+        min-height: auto;
+    }
+
+    .nutrient-card {
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    /* Еще более компактные карточки */
+    .nutrient-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .nutrient-list li {
+        padding: 0.25rem 0;
+        font-size: 0.85rem;
+        padding-left: 1rem;
+    }
+
+    /* Исправляем отступы для списков */
+    .nutrient-list li::before {
+        left: 0;
+        top: 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    /* Увеличиваем отступы между тегами */
+    .healthy-eating-tags {
+        gap: 1rem;
+    }
+
+    .tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .nutrient-title {
+        font-size: 1rem;
+        min-height: auto;
+    }
+
+    .nutrient-card[data-category="moderation"] .nutrient-title,
+    .nutrient-card[data-category="regularity"] .nutrient-title,
+    .nutrient-card[data-category="balance"] .nutrient-title,
+    .nutrient-card[data-category="natural"] .nutrient-title,
+    .nutrient-card[data-category="taste"] .nutrient-title {
+        font-size: 0.9rem;
+        min-height: auto;
+    }
+
+    .nutrient-card {
+        min-height: auto;
+        padding: 0.8rem;
+    }
+
+    /* Минимальные размеры для очень маленьких экранов */
+    .nutrient-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .nutrient-list li {
+        padding: 0.2rem 0;
+        font-size: 0.8rem;
+        padding-left: 0.8rem;
+    }
+
+    .nutrient-list li::before {
+        left: 0;
+        top: 0.2rem;
+        font-size: 0.75rem;
+    }
+
+    /* Увеличиваем отступы между тегами */
+    .healthy-eating-tags {
+        gap: 0.8rem;
+    }
+
+    .tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Адаптивные стили для тегов */
+@media (max-width: 768px) {
+    .healthy-eating-tags {
+        gap: 0.8rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+    }
+
+    .tag {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        border-radius: 20px;
+        min-width: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .healthy-eating-tags {
+        gap: 0.6rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 0.5rem;
+    }
+
+    .tag {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+        border-radius: 18px;
+        min-width: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 400px) {
+    .healthy-eating-tags {
+        gap: 0.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 0.3rem;
+    }
+
+    .tag {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
+        border-radius: 16px;
+        min-width: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 320px) {
+    .healthy-eating-tags {
+        gap: 0.4rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 0.2rem;
+    }
+
+    .tag {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+        border-radius: 14px;
+        min-width: auto;
+        white-space: nowrap;
+    }
+}

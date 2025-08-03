@@ -1,0 +1,318 @@
+@media (max-width: 1450px) {
+    .hero-text-block-inner {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-image {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-btn {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        padding: 120px 0 60px 0;
+        background: linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fef7f0 70%,
+            #f5e6d3 100%
+        );
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .hero-text-block {
+        width: 100%;
+        order: 1;
+        animation: slideInUp 1s ease-out;
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hero-text-block-inner {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .hero-btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.2rem;
+        animation: fadeInUp 1s ease-out 0.6s both;
+    }
+
+    .hero-image-block {
+        width: 100%;
+        order: 2;
+        height: 400px;
+        position: relative;
+        animation: slideInUp 1s ease-out 0.3s both;
+    }
+
+    .hero-image {
+        width: 60%;
+        max-width: 300px;
+        transform: rotate(0deg);
+        margin: 0 auto;
+        animation: floatImage 3s ease-in-out infinite;
+    }
+
+    /* Увеличенная видимость фоновых элементов */
+    .hero-bg-image {
+        width: 80px !important;
+        height: 80px !important;
+        filter: blur(2px);
+        opacity: 0.8;
+        animation: pulse 4s ease-in-out infinite;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    /* Распространение фруктов по всей секции */
+    .hero-bg-image:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .hero-bg-image:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+
+    .hero-bg-image:nth-child(3) {
+        animation-delay: 1s;
+    }
+
+    .hero-bg-image:nth-child(4) {
+        animation-delay: 1.5s;
+    }
+
+    .hero-bg-image:nth-child(5) {
+        animation-delay: 2s;
+    }
+
+    .hero-bg-image:nth-child(6) {
+        animation-delay: 2.5s;
+    }
+
+    .hero-bg-image:nth-child(7) {
+        animation-delay: 3s;
+    }
+
+    .hero-bg-image:nth-child(8) {
+        animation-delay: 3.5s;
+    }
+
+    .hero-bg-image:nth-child(9) {
+        animation-delay: 4s;
+    }
+
+    .hero-bg-image:nth-child(10) {
+        animation-delay: 4.5s;
+    }
+
+    .hero-bg-image:nth-child(11) {
+        animation-delay: 5s;
+    }
+
+    .hero-bg-image:nth-child(12) {
+        animation-delay: 5.5s;
+    }
+
+    .hero-bg-image:nth-child(13) {
+        animation-delay: 6s;
+    }
+
+    .hero-bg-image:nth-child(14) {
+        animation-delay: 6.5s;
+    }
+
+    .hero-bg-image:nth-child(15) {
+        animation-delay: 7s;
+    }
+
+    .hero-bg-image:nth-child(16) {
+        animation-delay: 7.5s;
+    }
+
+    .hero-bg-image:nth-child(17) {
+        animation-delay: 8s;
+    }
+
+    .hero-bg-image:nth-child(18) {
+        animation-delay: 8.5s;
+    }
+
+    .circle-1 {
+        width: 2000px;
+        height: 2000px;
+        top: -100px;
+        left: -100px;
+        animation: float 8s ease-in-out infinite;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        min-height: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 100px 0 40px 0;
+        background: linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fef7f0 80%,
+            #f5e6d3 100%
+        );
+    }
+
+    .hero-content {
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .hero-image-block {
+        height: 300px;
+    }
+
+    .hero-image {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    /* Еще больше фруктов на мобильных */
+    .hero-bg-image {
+        width: 60px !important;
+        height: 60px !important;
+        filter: blur(1px);
+        opacity: 0.9;
+        animation: pulse 3s ease-in-out infinite;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .circle-1 {
+        width: 600px;
+        height: 600px;
+        top: -50px;
+        left: -50px;
+        animation: float 6s ease-in-out infinite;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .hero-image-block {
+        height: 250px;
+    }
+
+    .hero-image {
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .hero-bg-image {
+        width: 45px !important;
+        height: 45px !important;
+        opacity: 0.8;
+        animation: pulse 2.5s ease-in-out infinite;
+        box-shadow: none;
+        background: transparent;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0 40px 0;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .hero-text-block {
+        width: 50%;
+        order: 1;
+    }
+
+    .hero-text-block-inner {
+        margin-left: 0;
+        align-items: flex-start;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .hero-image-block {
+        width: 50%;
+        order: 2;
+        height: 300px;
+    }
+
+    .hero-image {
+        width: 80%;
+        max-width: 250px;
+    }
+}

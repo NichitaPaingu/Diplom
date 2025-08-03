@@ -1,0 +1,226 @@
+.start-now-section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Декоративные элементы */
+.start-now-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 107, 53, 0.3),
+        transparent
+    );
+}
+
+.start-now-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 107, 53, 0.3),
+        transparent
+    );
+}
+
+.start-now-bg {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 32px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15), 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    animation: subtleFloat 6s ease-in-out infinite;
+}
+
+@keyframes subtleFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.start-now-bg:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.start-now-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.start-now-bg:hover .start-now-bg-img {
+    transform: scale(1.05);
+    filter: brightness(1) contrast(1.2);
+}
+
+.start-now-text {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
+    letter-spacing: 3px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2.5rem 3.5rem;
+    border-radius: 24px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 1.2s ease-out 0.3s both;
+}
+
+.start-now-text:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.start-now-text span {
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.start-now-text span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.start-now-text span:hover {
+    transform: scale(1.05);
+    text-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 6px 16px rgba(0, 0, 0, 0.5);
+    color: #ffa726;
+}
+
+.start-now-text span:hover::before {
+    left: 100%;
+}
+
+/* Улучшенный градиентный оверлей */
+.start-now-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.1) 30%,
+        rgba(0, 0, 0, 0.2) 70%,
+        rgba(0, 0, 0, 0.4) 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.start-now-bg:hover::after {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.15) 30%,
+        rgba(0, 0, 0, 0.25) 70%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+}
+
+/* Улучшенная анимация для текста */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Добавляем декоративные частицы */
+.start-now-section::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 107, 53, 0.6);
+    border-radius: 50%;
+    animation: twinkle 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+.start-now-section::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 167, 38, 0.5);
+    border-radius: 50%;
+    animation: twinkle 5s ease-in-out infinite 1s;
+    z-index: 1;
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
