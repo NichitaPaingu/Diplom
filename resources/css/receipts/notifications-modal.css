@@ -1,0 +1,66 @@
+/* Notifications и Modal для страницы Receipts */
+
+/* Notifications */
+.receipt-notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.receipt-notification {
+    background: var(--receipt-success-color);
+    color: var(--receipt-white);
+    padding: 15px 20px;
+    border-radius: var(--receipt-border-radius);
+    box-shadow: var(--receipt-shadow-lg);
+    margin-bottom: 10px;
+    transform: translateX(100%);
+    transition: var(--receipt-transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.receipt-notification.show {
+    transform: translateX(0);
+}
+
+/* Modal */
+.receipt-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.receipt-modal-content {
+    background-color: var(--receipt-white);
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: var(--receipt-border-radius-lg);
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: var(--receipt-shadow-xl);
+}
+
+.receipt-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--receipt-gray-500);
+    transition: var(--receipt-transition);
+}
+
+.receipt-close:hover {
+    color: var(--receipt-dark-color);
+}

@@ -1,0 +1,11 @@
+/* Основной CSS файл для страницы Receipts */
+/* Импортируем все секции */
+
+@import "./variables.css";
+@import "./hero-section.css";
+@import "./filters-sidebar.css";
+@import "./recipes-header.css";
+@import "./recipe-cards.css";
+@import "./premium-recipe.css";
+@import "./list-view.css";
+@import "./notifications-modal.css";

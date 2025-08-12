@@ -1,0 +1,74 @@
+/* Premium Recipe для страницы Receipts */
+.receipt-premium-recipe {
+    border: 2px solid var(--receipt-warning-color);
+    position: relative;
+}
+
+.receipt-premium-recipe::before {
+    content: "⭐ Premium";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--receipt-warning-color);
+    color: var(--receipt-white);
+    padding: 6px 12px;
+    border-radius: var(--receipt-border-radius);
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.receipt-premium-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--receipt-transition);
+}
+
+.receipt-premium-recipe:hover .receipt-premium-overlay {
+    opacity: 1;
+}
+
+.receipt-premium-content {
+    text-align: center;
+    color: var(--receipt-white);
+    padding: 20px;
+}
+
+.receipt-premium-content i {
+    font-size: 2rem;
+    color: var(--receipt-warning-color);
+    margin-bottom: 15px;
+}
+
+.receipt-premium-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.receipt-subscribe-btn {
+    background: var(--receipt-warning-color);
+    color: var(--receipt-white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--receipt-border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--receipt-transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.receipt-subscribe-btn:hover {
+    background: #e6b800;
+    transform: translateY(-2px);
+}

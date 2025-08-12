@@ -16,6 +16,6 @@
         {{ $slot }}
     </main>
 
-    {{-- @include('partials.footer') --}}
+    @include('partials.footer')
 </body>
 </html>

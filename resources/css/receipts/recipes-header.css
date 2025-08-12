@@ -1,0 +1,224 @@
+/* Recipes Header для страницы Receipts */
+.receipt-recipes-header {
+    background: var(--receipt-white);
+    border-radius: var(--receipt-border-radius-lg);
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--receipt-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.receipt-recipes-info h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--receipt-dark-color);
+    margin: 0 0 10px 0;
+}
+
+.receipt-recipes-count {
+    color: var(--receipt-gray-600);
+    font-size: 1.1rem;
+}
+
+.receipt-recipes-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.receipt-sort-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.receipt-sort-label {
+    font-weight: 600;
+    color: var(--receipt-gray-700);
+}
+
+/* Кастомный выпадающий список */
+.receipt-custom-dropdown {
+    position: relative;
+    min-width: 180px;
+    user-select: none;
+}
+
+.receipt-dropdown-trigger {
+    background: var(--receipt-white);
+    border: 2px solid var(--receipt-gray-200);
+    border-radius: 12px;
+    padding: 12px 40px 12px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--receipt-gray-700);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.receipt-dropdown-trigger:hover {
+    border-color: var(--receipt-primary-color);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.15);
+    transform: translateY(-1px);
+}
+
+.receipt-dropdown-trigger.active {
+    border-color: var(--receipt-primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.receipt-dropdown-text {
+    flex: 1;
+    text-align: left;
+}
+
+.receipt-dropdown-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--receipt-gray-400);
+    transition: all 0.3s ease;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+.receipt-dropdown-trigger:hover .receipt-dropdown-arrow,
+.receipt-dropdown-trigger.active .receipt-dropdown-arrow {
+    border-top-color: var(--receipt-primary-color);
+}
+
+.receipt-dropdown-trigger.active .receipt-dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Выпадающее меню */
+.receipt-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--receipt-white);
+    border: 2px solid var(--receipt-gray-200);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.receipt-dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    max-height: 300px;
+}
+
+/* Опции выпадающего списка */
+.receipt-dropdown-option {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid var(--receipt-gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.receipt-dropdown-option:last-child {
+    border-bottom: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.receipt-dropdown-option:hover {
+    background: rgba(255, 107, 53, 0.08);
+    color: var(--receipt-primary-color);
+    padding-left: 20px;
+}
+
+.receipt-dropdown-option.selected {
+    background: var(--receipt-primary-color);
+    color: var(--receipt-white);
+    font-weight: 600;
+}
+
+.receipt-dropdown-option.selected:hover {
+    background: var(--receipt-primary-color);
+    color: var(--receipt-white);
+}
+
+.receipt-dropdown-option.highlighted {
+    background: rgba(255, 107, 53, 0.12);
+    color: var(--receipt-primary-color);
+    padding-left: 20px;
+}
+
+/* Иконка выбранной опции */
+.receipt-dropdown-option.selected::after {
+    content: "✓";
+    color: var(--receipt-white);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.receipt-view-toggle {
+    display: flex;
+    border: 2px solid var(--receipt-gray-200);
+    border-radius: var(--receipt-border-radius);
+    overflow: hidden;
+}
+
+.receipt-view-btn {
+    padding: 10px 15px;
+    border: none;
+    background: var(--receipt-white);
+    cursor: pointer;
+    transition: var(--receipt-transition);
+    color: var(--receipt-gray-600);
+}
+
+.receipt-view-btn:hover {
+    background: var(--receipt-gray-100);
+    color: var(--receipt-dark-color);
+}
+
+.receipt-view-btn.active {
+    background: var(--receipt-primary-color);
+    color: var(--receipt-white);
+}
+
+/* Адаптивность для заголовка рецептов */
+@media (max-width: 768px) {
+    .receipt-recipes-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .receipt-recipes-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .receipt-custom-dropdown {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .receipt-recipes-header {
+        padding: 20px;
+    }
+}

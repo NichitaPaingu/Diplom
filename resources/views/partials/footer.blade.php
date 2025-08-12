@@ -2,7 +2,7 @@
     <div class="container footer-content">
         <!-- Верхний блок -->
         <div class="footer-top">
-            <div class="logo-block">
+            <a href="{{ route('home') }}" class="logo-block">
                 <span class="logo-icon" aria-hidden="true">
                     <img src="{{ asset('storage/header/leaf.png') }}" alt="Листочек" class="logo-image">
                 </span>
@@ -10,15 +10,15 @@
                     <span class="logo-title">Здоровое</span>
                     <span class="logo-subtitle">питание</span>
                 </span>
-            </div>
+            </a>
             <div class="footer-nav-block">
                 <nav class="footer-nav" aria-label="Навигация в подвале">
                     <ul class="footer-nav-list">
-                        <li><a href="/" class="footer-nav-link">Советы</a></li>
-                        <li><a href="/recipes" class="footer-nav-link">Рецепты</a></li>
-                        <li><a href="/individual" class="footer-nav-link">Индивидуальный подход</a></li>
-                        <li><a href="/templates" class="footer-nav-link">Шаблоны</a></li>
-                        <li><a href="/values" class="footer-nav-link">Ценности</a></li>
+                        <li><a href="{{ route('advices') }}" class="footer-nav-link">Советы</a></li>
+                        <li><a href="{{ route('recipes') }}" class="footer-nav-link">Рецепты</a></li>
+                        <li><a href="{{ route('individuals') }}" class="footer-nav-link">Индивидуальный подход</a></li>
+                        <li><a href="{{ route('template') }}" class="footer-nav-link">Шаблоны</a></li>
+                        <li><a href="{{ route('values') }}" class="footer-nav-link">Ценности</a></li>
                     </ul>
                 </nav>
                 <div class="footer-bottom-right">

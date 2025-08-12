@@ -5,6 +5,7 @@ import { initBurgerMenu } from './components/burger-menu';
 import { initHealthyEatingTags, initCardAnimations } from './components/healthy-eating-tags';
 import './components/subscribe-section';
 import './components/recipes-preview';
+import './components/receipes';
 
 // Инициализация при загрузке DOM
 $(document).ready(function () {

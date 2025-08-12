@@ -1,0 +1,47 @@
+/* CSS Variables для секции Receipts */
+:root {
+    --receipt-primary-color: #ff6b35;
+    --receipt-secondary-color: #4ecdc4;
+    --receipt-accent-color: #45b7d1;
+    --receipt-success-color: #96ceb4;
+    --receipt-warning-color: #feca57;
+    --receipt-danger-color: #ff9ff3;
+    --receipt-dark-color: #2c3e50;
+    --receipt-light-color: #f8f9fa;
+    --receipt-white: #ffffff;
+    --receipt-gray-100: #f8f9fa;
+    --receipt-gray-200: #e9ecef;
+    --receipt-gray-300: #dee2e6;
+    --receipt-gray-400: #ced4da;
+    --receipt-gray-500: #adb5bd;
+    --receipt-gray-600: #6c757d;
+    --receipt-gray-700: #495057;
+    --receipt-gray-800: #343a40;
+    --receipt-gray-900: #212529;
+
+    --receipt-border-radius: 12px;
+    --receipt-border-radius-lg: 16px;
+    --receipt-border-radius-xl: 20px;
+    --receipt-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --receipt-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --receipt-shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --receipt-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Общие стили для контейнера */
+.receipt-modern-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 0 20px; /* Добавляем отступ сверху для фиксированного header */
+}
+
+/* Анимации */
+@keyframes receipt-float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}

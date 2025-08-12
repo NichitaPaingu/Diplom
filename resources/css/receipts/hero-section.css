@@ -1,0 +1,149 @@
+/* Hero Section для страницы Receipts */
+.receipt-hero-section {
+    background: linear-gradient(
+        135deg,
+        var(--receipt-primary-color) 0%,
+        var(--receipt-secondary-color) 100%
+    );
+    border-radius: var(--receipt-border-radius-xl);
+    padding: 60px 40px;
+    margin: 0; /* Убираем margin, используем padding-top */
+    padding-top: 120px; /* Отступ сверху для header */
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    overflow: hidden;
+    color: var(--receipt-white);
+    z-index: 1; /* Устанавливаем z-index ниже header */
+}
+
+.receipt-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.receipt-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.receipt-hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.receipt-hero-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.receipt-stat-item {
+    text-align: center;
+}
+
+.receipt-stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.receipt-stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.receipt-hero-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.receipt-floating-shapes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.receipt-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: receipt-float 6s ease-in-out infinite;
+}
+
+.receipt-shape-1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.receipt-shape-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+.receipt-shape-3 {
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    right: 60%;
+    animation-delay: 4s;
+}
+
+/* Адаптивность для Hero секции */
+@media (max-width: 992px) {
+    .receipt-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .receipt-hero-stats {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .receipt-hero-section {
+        padding: 40px 20px;
+        margin: 20px 0;
+    }
+
+    .receipt-hero-title {
+        font-size: 2rem;
+    }
+
+    .receipt-hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .receipt-hero-section {
+        padding: 30px 15px;
+    }
+
+    .receipt-hero-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Дополнительный отступ для мобильных устройств */
+@media (max-width: 768px) {
+    .receipt-hero-section {
+        margin: 100px 0 20px 0; /* Меньший отступ на мобильных */
+    }
+}
